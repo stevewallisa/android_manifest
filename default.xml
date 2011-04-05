@@ -3,33 +3,25 @@
   <remote  name="korg"
            fetch="git://android.git.kernel.org/"
            review="review.source.android.com" />
-
-  <remote  name="github" 
-           fetch="git://github.com/" />
-
   <default revision="gingerbread"
            remote="korg" />
 
-<project path="android" name="DroidConcepts/android_android" remote="github" />
-
-<project path="build" name="DroidConcepts/android_build" remote="github">
+  <project path="build" name="platform/build">
     <copyfile src="core/root.mk" dest="Makefile" />
-</project>
-
+  </project>
   <project path="bionic" name="platform/bionic" />
-
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="bootable/recovery" name="platform/bootable/recovery" />
-
   <project path="cts" name="platform/cts" />
   <project path="dalvik" name="platform/dalvik" />
   <project path="development" name="platform/development" />
-
   <project path="device/common" name="device/common" />
-<project path="device/motorola/sholes" name="DroidConcepts/android_device_motorola_sholes" remote="github" />
+  <project path="device/htc/common" name="device/htc/common" />
+  <project path="device/htc/passion" name="device/htc/passion" />
+  <project path="device/htc/passion-common" name="device/htc/passion-common" />
   <project path="device/sample" name="device/sample" />
-
+  <project path="device/samsung/crespo" name="device/samsung/crespo" />
   <project path="external/apache-http" name="platform/external/apache-http" />
   <project path="external/astl" name="platform/external/astl" />
   <project path="external/bison" name="platform/external/bison" />
@@ -46,7 +38,7 @@
   <project path="external/dhcpcd" name="platform/external/dhcpcd" />
   <project path="external/dnsmasq" name="platform/external/dnsmasq" />
   <project path="external/dropbear" name="platform/external/dropbear" />
-  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />  
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />
   <project path="external/easymock" name="platform/external/easymock" />
   <project path="external/elfcopy" name="platform/external/elfcopy" />
   <project path="external/elfutils" name="platform/external/elfutils" />
@@ -113,11 +105,9 @@
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/yaffs2" name="platform/external/yaffs2" />
   <project path="external/zlib" name="platform/external/zlib" />
-
-<project path="frameworks/base" name="DroidConcepts/frameworks_base" remote="github" />
+  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
-
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" />
@@ -127,19 +117,16 @@
   <project path="hardware/ril" name="platform/hardware/ril" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
-
   <project path="libcore" name="platform/libcore" />
   <project path="ndk" name="platform/ndk" />
-
   <project path="packages/apps/AccountsAndSyncSettings" name="platform/packages/apps/AccountsAndSyncSettings" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
   <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
-<project path="packages/apps/Camera" name="DroidConcepts/android_packages_apps_camera" remote="github" />
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
   <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
-<project path="packages/apps/DCWallpapers" name="DroidConcepts/android_packages_apps_DCWallpapers" remote="github" revision="master" />
   <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
@@ -155,20 +142,15 @@
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
   <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
-<project path="packages/apps/SoundRecorder" name="DroidConcepts/android_packages_apps_soundrecorder" remote="github" revision="master" />
+  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
-<project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" remote="github" revison="master" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
-<project path="packages/apps/WidgetPicker" name="DroidConcepts/android_packages_apps_WidgetPicker" remote="github" revison="master" />
-
   <project path="packages/experimental" name="platform/packages/experimental" />
-
   <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME" />
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" />
   <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" />
-
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" />
   <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
   <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider" />
@@ -178,15 +160,12 @@
   <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" />
   <project path="packages/providers/TelephonyProvider" name="platform/packages/providers/TelephonyProvider" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" />
-
   <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" />
   <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" />
   <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" />
   <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" />
-
   <project path="prebuilt" name="platform/prebuilt" />
   <project path="sdk" name="platform/sdk" revision="tools_r7" />
-
   <project path="system/bluetooth" name="platform/system/bluetooth" />
   <project path="system/core" name="platform/system/core" />
   <project path="system/extras" name="platform/system/extras" />
@@ -194,7 +173,5 @@
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/vold" name="platform/system/vold" />
   <project path="system/wlan/ti" name="platform/system/wlan/ti" />
-
-<project path="vendor/DroidConcepts" name="DroidConcepts/android_vendor_DroidConcepts" remote="github" />
 
 </manifest>
